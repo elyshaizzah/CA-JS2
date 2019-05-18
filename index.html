@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>My First Website</title>
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link href="styles.css" rel='stylesheet' />
+</head>
+
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="col-sm">
+        <h1 class='display-1'>My Addition Calculator</h1>
+        <p class="lead">
+          <blockquote class="blockquote">
+            <p class="mb-0">Bom! 2 + 2 is 4 minus 1 that's 3, quick maths!</p>
+            <footer class="blockquote-footer">A man who is not hot, a.k.a, <cite title="Source Title">Big Shaq</cite>
+            </footer>
+          </blockquote>
+        </p>
+      </div>
+    </div>
+    <hr />
+
+    <form>
+      <div class="row">
+        <div class="col">
+          <input id="firstNumber" type="text" class="form-control" placeholder="First Number">
+        </div>
+        <div class="col">
+          <input id="secondNumber" type="text" class="form-control" placeholder="Second Number">
+        </div>
+    </form>
+  </div>
+
+  <div class="row">
+    <div class="col">
+      <div class="btn-group" role="group">
+        <button type="button" class="btn btn-primary" onclick="add()">Add</button>
+        <button type="button" class="btn btn-secondary">Subtract</button>
+        <button type="button" class="btn btn-info">Multiply</button>
+        <button type="button" class="btn btn-warning">Divide</button>
+
+        <button type="button" class="btn btn-dark">Clear</button>
+      </div>
+    </div>
+  </div>
+
+  <div class="row mt-3">
+    <div class="col">
+      <h1 id="p1">result</h1>
+      <p></p>
+    </div>
+  </div>
+</body>
+
+<script>
+
+  function add() {
+    const firstNumberElement = document.getElementById('firstNumber').value;
+    const secondNumberElement = document.getElementById('secondNumber').value;
+
+    const firstNumber = parseInt(firstNumberElement);
+    const secondNumber = parseInt(secondNumberElement);
+
+    const total = firstNumber + secondNumber;
+    
+    document.getElementById("p1").innerHTML = total;
+  }
+</script>
+
+</html>
